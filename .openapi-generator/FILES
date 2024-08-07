@@ -1,0 +1,10 @@
+.gitignore
+.openapi-generator-ignore
+api.ts
+api/apis.ts
+api/solutionApi.ts
+git_push.sh
+model/createSolutionResponse.ts
+model/models.ts
+model/participantType.ts
+model/solution.ts
