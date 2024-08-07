@@ -96,7 +96,7 @@ export class SolutionApi {
      * @param matchId 競技のID
      * @param variable 解空間の変数
      */
-    public async createSolution (matchId: string, variable: object, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateSolutionResponse;  }> {
+    public async createSolution (matchId: string, variable: Array<number>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateSolutionResponse;  }> {
         const localVarPath = this.basePath + '/solution';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -124,7 +124,7 @@ export class SolutionApi {
         }
 
         if (variable !== undefined) {
-            localVarQueryParameters['variable'] = ObjectSerializer.serialize(variable, "object");
+            localVarQueryParameters['variable'] = ObjectSerializer.serialize(variable, "Array<number>");
         }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);

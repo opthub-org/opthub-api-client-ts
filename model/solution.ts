@@ -33,7 +33,7 @@ export class Solution {
     /**
     * 解空間の変数
     */
-    'variable': object;
+    'variable': Array<number>;
     /**
     * 作成日時
     */
@@ -69,7 +69,7 @@ export class Solution {
         {
             "name": "variable",
             "baseName": "variable",
-            "type": "object"
+            "type": "Array<number>"
         },
         {
             "name": "createdAt",
