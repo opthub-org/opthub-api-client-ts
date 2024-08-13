@@ -40,7 +40,7 @@ export class SolutionApi {
 
     protected authentications = {
         'default': <Authentication>new VoidAuth(),
-        'ApiKeyAuth': new ApiKeyAuth('header', 'Authorization'),
+        'ApiKeyAuth': new ApiKeyAuth('header', 'x-api-key'),
     }
 
     protected interceptors: Interceptor[] = [];
