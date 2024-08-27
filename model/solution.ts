@@ -11,7 +11,7 @@
  */
 
 import { RequestFile } from './models';
-import { ParticipantType } from './participantType';
+import { Participant } from './participant';
 
 /**
 * 解
@@ -21,11 +21,7 @@ export class Solution {
     * 競技のID
     */
     'matchId': string;
-    'participantType': ParticipantType;
-    /**
-    * 参加者のID
-    */
-    'participantId': string;
+    'participant'?: Participant;
     /**
     * 試行番号
     */
@@ -52,14 +48,9 @@ export class Solution {
             "type": "string"
         },
         {
-            "name": "participantType",
-            "baseName": "participantType",
-            "type": "ParticipantType"
-        },
-        {
-            "name": "participantId",
-            "baseName": "participantId",
-            "type": "string"
+            "name": "participant",
+            "baseName": "participant",
+            "type": "Participant"
         },
         {
             "name": "trialNo",
@@ -87,5 +78,3 @@ export class Solution {
     }
 }
 
-export namespace Solution {
-}

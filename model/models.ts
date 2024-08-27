@@ -1,6 +1,7 @@
 import localVarRequest from 'request';
 
 export * from './createSolutionResponse';
+export * from './participant';
 export * from './participantType';
 export * from './solution';
 
@@ -18,6 +19,7 @@ export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
 import { CreateSolutionResponse } from './createSolutionResponse';
+import { Participant } from './participant';
 import { ParticipantType } from './participantType';
 import { Solution } from './solution';
 
@@ -39,6 +41,7 @@ let enumsMap: {[index: string]: any} = {
 
 let typeMap: {[index: string]: any} = {
     "CreateSolutionResponse": CreateSolutionResponse,
+    "Participant": Participant,
     "Solution": Solution,
 }
 

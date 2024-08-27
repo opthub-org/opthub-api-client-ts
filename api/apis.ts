@@ -1,3 +1,9 @@
+export * from './aliasApi';
+import { AliasApi } from './aliasApi';
+export * from './competitionApi';
+import { CompetitionApi } from './competitionApi';
+export * from './matchApi';
+import { MatchApi } from './matchApi';
 export * from './solutionApi';
 import { SolutionApi } from './solutionApi';
 import * as http from 'http';
@@ -11,4 +17,4 @@ export class HttpError extends Error {
 
 export { RequestFile } from '../model/models';
 
-export const APIS = [SolutionApi];
+export const APIS = [AliasApi, CompetitionApi, MatchApi, SolutionApi];

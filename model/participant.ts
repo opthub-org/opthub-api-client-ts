@@ -11,34 +11,36 @@
  */
 
 import { RequestFile } from './models';
-import { Participant } from './participant';
+import { ParticipantType } from './participantType';
 
 /**
-* 解の作成リクエストの結果
+* 参加者の情報
 */
-export class CreateSolutionResponse {
-    'participant'?: Participant;
+export class Participant {
     /**
-    * 試行番号
+    * 参加者のID
     */
-    'trialNo': number;
+    'participantId': string;
+    'participantType': ParticipantType;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "participant",
-            "baseName": "participant",
-            "type": "Participant"
+            "name": "participantId",
+            "baseName": "participantId",
+            "type": "string"
         },
         {
-            "name": "trialNo",
-            "baseName": "trialNo",
-            "type": "number"
+            "name": "participantType",
+            "baseName": "participantType",
+            "type": "ParticipantType"
         }    ];
 
     static getAttributeTypeMap() {
-        return CreateSolutionResponse.attributeTypeMap;
+        return Participant.attributeTypeMap;
     }
 }
 
+export namespace Participant {
+}
