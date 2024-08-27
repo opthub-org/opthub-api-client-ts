@@ -5,6 +5,7 @@ api/aliasApi.ts
 api/apis.ts
 api/competitionApi.ts
 api/matchApi.ts
+api/participantApi.ts
 api/solutionApi.ts
 git_push.sh
 model/createSolutionResponse.ts

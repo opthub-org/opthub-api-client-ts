@@ -17,20 +17,11 @@ import { ParticipantType } from './participantType';
 * Participant information
 */
 export class Participant {
-    /**
-    * Participant ID
-    */
-    'participantId': string;
     'participantType': ParticipantType;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "participantId",
-            "baseName": "participantId",
-            "type": "string"
-        },
         {
             "name": "participantType",
             "baseName": "participantType",

@@ -11,13 +11,15 @@
  */
 
 import { RequestFile } from './models';
-import { Participant } from './participant';
 
 /**
 * Information of the created solution
 */
 export class CreateSolutionResponse {
-    'participant': Participant;
+    /**
+    * Participant ID
+    */
+    'participantId': string;
     /**
     * Trial number
     */
@@ -27,9 +29,9 @@ export class CreateSolutionResponse {
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "participant",
-            "baseName": "participant",
-            "type": "Participant"
+            "name": "participantId",
+            "baseName": "participantId",
+            "type": "string"
         },
         {
             "name": "trialNo",

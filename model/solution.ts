@@ -11,7 +11,6 @@
  */
 
 import { RequestFile } from './models';
-import { Participant } from './participant';
 
 /**
 * 解
@@ -21,7 +20,6 @@ export class Solution {
     * Match ID
     */
     'matchId': string;
-    'participant': Participant;
     /**
     * Trial number
     */
@@ -46,11 +44,6 @@ export class Solution {
             "name": "matchId",
             "baseName": "matchId",
             "type": "string"
-        },
-        {
-            "name": "participant",
-            "baseName": "participant",
-            "type": "Participant"
         },
         {
             "name": "trialNo",
