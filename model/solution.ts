@@ -1,6 +1,6 @@
 /**
  * OptHub REST API
- * OptHubの公開REST APIです。
+ * OptHub Public REST API.
  *
  * The version of the OpenAPI document: 0.1.0
  * Contact: dev@opthub.ai
@@ -18,24 +18,24 @@ import { Participant } from './participant';
 */
 export class Solution {
     /**
-    * 競技のID
+    * Match ID
     */
     'matchId': string;
-    'participant'?: Participant;
+    'participant': Participant;
     /**
-    * 試行番号
+    * Trial number
     */
     'trialNo': number;
     /**
-    * 解空間の変数
+    * Solution space variable
     */
     'variable': Array<number>;
     /**
-    * 作成日時
+    * Creation date and time
     */
     'createdAt': Date;
     /**
-    * 作成したユーザのID
+    * ID of the user who created it
     */
     'userId'?: string;
 

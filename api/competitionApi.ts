@@ -1,6 +1,6 @@
 /**
  * OptHub REST API
- * OptHubの公開REST APIです。
+ * OptHub Public REST API.
  *
  * The version of the OpenAPI document: 0.1.0
  * Contact: dev@opthub.ai
@@ -90,8 +90,8 @@ export class CompetitionApi {
 
     /**
      * 
-     * @summary コンペティションIDからコンペティションのエイリアスを取得
-     * @param id コンペティションのID
+     * @summary Retrieve the competition alias from the competition ID
+     * @param id Competition ID
      */
     public async resolveCompetitionAliasById (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
         const localVarPath = this.basePath + '/competition/{id}/alias'
@@ -162,8 +162,8 @@ export class CompetitionApi {
     }
     /**
      * 
-     * @summary コンペティションのエイリアスからコンペティションIDを取得
-     * @param alias コンペティションのエイリアス
+     * @summary Retrieve the competition ID from the competition alias
+     * @param alias Competition alias
      */
     public async resolveCompetitionIdByAlias (alias: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
         const localVarPath = this.basePath + '/competition/alias/{alias}'

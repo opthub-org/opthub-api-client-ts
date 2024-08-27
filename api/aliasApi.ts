@@ -1,6 +1,6 @@
 /**
  * OptHub REST API
- * OptHubの公開REST APIです。
+ * OptHub Public REST API.
  *
  * The version of the OpenAPI document: 0.1.0
  * Contact: dev@opthub.ai
@@ -90,8 +90,8 @@ export class AliasApi {
 
     /**
      * 
-     * @summary コンペティションIDからコンペティションのエイリアスを取得
-     * @param id コンペティションのID
+     * @summary Retrieve the competition alias from the competition ID
+     * @param id Competition ID
      */
     public async resolveCompetitionAliasById (id: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
         const localVarPath = this.basePath + '/competition/{id}/alias'
@@ -162,8 +162,8 @@ export class AliasApi {
     }
     /**
      * 
-     * @summary コンペティションのエイリアスからコンペティションIDを取得
-     * @param alias コンペティションのエイリアス
+     * @summary Retrieve the competition ID from the competition alias
+     * @param alias Competition alias
      */
     public async resolveCompetitionIdByAlias (alias: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
         const localVarPath = this.basePath + '/competition/alias/{alias}'
@@ -234,8 +234,8 @@ export class AliasApi {
     }
     /**
      * 
-     * @summary 競技IDから競技のエイリアスを取得
-     * @param matchId 競技のID
+     * @summary Retrieve the match alias from the match ID
+     * @param matchId Match ID
      */
     public async resolveMatchAliasById (matchId: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
         const localVarPath = this.basePath + '/competition/match/{matchId}/alias'
@@ -306,8 +306,8 @@ export class AliasApi {
     }
     /**
      * 
-     * @summary 競技のエイリアスから競技IDを取得
-     * @param alias 競技のエイリアス
+     * @summary Retrieve the match ID from the match alias
+     * @param alias Match alias
      */
     public async resolveMatchIdByAlias (alias: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: string;  }> {
         const localVarPath = this.basePath + '/competition/match/alias/{alias}'

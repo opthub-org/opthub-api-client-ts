@@ -13,9 +13,10 @@
 import { RequestFile } from './models';
 
 /**
-* Participant type
+* Failed to retrieve the solution
 */
-export enum ParticipantType {
-    User = <any> 'User',
-    Team = <any> 'Team'
+export enum GetSolutionError {
+    InvalidMatchId = <any> 'InvalidMatchId',
+    InvalidParticipantId = <any> 'InvalidParticipantId',
+    TrialNotFound = <any> 'TrialNotFound'
 }

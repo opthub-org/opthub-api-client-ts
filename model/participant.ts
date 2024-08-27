@@ -1,6 +1,6 @@
 /**
  * OptHub REST API
- * OptHubの公開REST APIです。
+ * OptHub Public REST API.
  *
  * The version of the OpenAPI document: 0.1.0
  * Contact: dev@opthub.ai
@@ -14,11 +14,11 @@ import { RequestFile } from './models';
 import { ParticipantType } from './participantType';
 
 /**
-* 参加者の情報
+* Participant information
 */
 export class Participant {
     /**
-    * 参加者のID
+    * Participant ID
     */
     'participantId': string;
     'participantType': ParticipantType;

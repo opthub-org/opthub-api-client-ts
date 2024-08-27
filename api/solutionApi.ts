@@ -1,6 +1,6 @@
 /**
  * OptHub REST API
- * OptHubの公開REST APIです。
+ * OptHub Public REST API.
  *
  * The version of the OpenAPI document: 0.1.0
  * Contact: dev@opthub.ai
@@ -16,6 +16,7 @@ import http from 'http';
 
 /* tslint:disable:no-unused-locals */
 import { CreateSolutionResponse } from '../model/createSolutionResponse';
+import { GetSolutionError } from '../model/getSolutionError';
 import { Solution } from '../model/solution';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
@@ -92,9 +93,9 @@ export class SolutionApi {
 
     /**
      * 
-     * @summary 解の作成
-     * @param matchId 競技のID
-     * @param variable 解空間の変数
+     * @summary Create solution
+     * @param matchId Match ID
+     * @param variable Solution space variable
      */
     public async createSolution (matchId: string, variable: Array<number>, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: CreateSolutionResponse;  }> {
         const localVarPath = this.basePath + '/competition/match/{matchId}/solution'
@@ -174,10 +175,10 @@ export class SolutionApi {
     }
     /**
      * 
-     * @summary 解の取得
-     * @param matchId 競技のID
-     * @param participantId 参加者のID
-     * @param trialNo 試行番号
+     * @summary Retrive solution
+     * @param matchId Match ID
+     * @param participantId Participant ID
+     * @param trialNo Trial number
      */
     public async getSolution (matchId: string, participantId: string, trialNo: number, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Solution;  }> {
         const localVarPath = this.basePath + '/competition/match/{matchId}/solution'

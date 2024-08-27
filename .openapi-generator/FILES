@@ -8,6 +8,7 @@ api/matchApi.ts
 api/solutionApi.ts
 git_push.sh
 model/createSolutionResponse.ts
+model/getSolutionError.ts
 model/models.ts
 model/participant.ts
 model/participantType.ts
