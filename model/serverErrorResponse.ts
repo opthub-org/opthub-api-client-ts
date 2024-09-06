@@ -11,34 +11,33 @@
  */
 
 import { RequestFile } from './models';
-import { ScalarOrVector } from './scalarOrVector';
+import { ServerErrorCode } from './serverErrorCode';
 
 /**
-* Solution information
+* Internal server error response
 */
-export class Solution {
-    'variable'?: ScalarOrVector;
-    /**
-    * Solution submitted date and time
-    */
-    'createdAt': Date;
+export class ServerErrorResponse {
+    'code'?: ServerErrorCode;
+    'message'?: string;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "variable",
-            "baseName": "variable",
-            "type": "ScalarOrVector"
+            "name": "code",
+            "baseName": "code",
+            "type": "ServerErrorCode"
         },
         {
-            "name": "createdAt",
-            "baseName": "createdAt",
-            "type": "Date"
+            "name": "message",
+            "baseName": "message",
+            "type": "string"
         }    ];
 
     static getAttributeTypeMap() {
-        return Solution.attributeTypeMap;
+        return ServerErrorResponse.attributeTypeMap;
     }
 }
 
+export namespace ServerErrorResponse {
+}

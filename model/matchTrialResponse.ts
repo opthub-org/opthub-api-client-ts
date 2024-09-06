@@ -11,15 +11,19 @@
  */
 
 import { RequestFile } from './models';
-import { ScalarOrVector } from './scalarOrVector';
+import { MatchTrialStatus } from './matchTrialStatus';
 
 /**
-* Solution information
+* Information of the created Solution
 */
-export class Solution {
-    'variable'?: ScalarOrVector;
+export class MatchTrialResponse {
     /**
-    * Solution submitted date and time
+    * Trial number
+    */
+    'trialNo': number;
+    'status': MatchTrialStatus;
+    /**
+    * Creation date and time
     */
     'createdAt': Date;
 
@@ -27,9 +31,14 @@ export class Solution {
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "variable",
-            "baseName": "variable",
-            "type": "ScalarOrVector"
+            "name": "trialNo",
+            "baseName": "trialNo",
+            "type": "number"
+        },
+        {
+            "name": "status",
+            "baseName": "status",
+            "type": "MatchTrialStatus"
         },
         {
             "name": "createdAt",
@@ -38,7 +47,9 @@ export class Solution {
         }    ];
 
     static getAttributeTypeMap() {
-        return Solution.attributeTypeMap;
+        return MatchTrialResponse.attributeTypeMap;
     }
 }
 
+export namespace MatchTrialResponse {
+}

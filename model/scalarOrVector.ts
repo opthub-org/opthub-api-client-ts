@@ -11,34 +11,36 @@
  */
 
 import { RequestFile } from './models';
-import { ScalarOrVector } from './scalarOrVector';
 
 /**
-* Solution information
+* A double-precision floating-point scalar or vector.
 */
-export class Solution {
-    'variable'?: ScalarOrVector;
+export class ScalarOrVector {
     /**
-    * Solution submitted date and time
+    * A double-precision floating-point vector.
     */
-    'createdAt': Date;
+    'vector'?: Array<number>;
+    /**
+    * A double-precision floating-point scalar value
+    */
+    'scalar'?: number;
 
     static discriminator: string | undefined = undefined;
 
     static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
         {
-            "name": "variable",
-            "baseName": "variable",
-            "type": "ScalarOrVector"
+            "name": "vector",
+            "baseName": "vector",
+            "type": "Array<number>"
         },
         {
-            "name": "createdAt",
-            "baseName": "createdAt",
-            "type": "Date"
+            "name": "scalar",
+            "baseName": "scalar",
+            "type": "number"
         }    ];
 
     static getAttributeTypeMap() {
-        return Solution.attributeTypeMap;
+        return ScalarOrVector.attributeTypeMap;
     }
 }
 

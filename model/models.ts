@@ -1,9 +1,24 @@
 import localVarRequest from 'request';
 
-export * from './createSolutionResponse';
-export * from './getSolutionError';
-export * from './participant';
-export * from './participantType';
+export * from './authErrorCode';
+export * from './authErrorResponse';
+export * from './createMatchTrial400Response';
+export * from './createMatchTrial403Response';
+export * from './createMatchTrial404Response';
+export * from './createMatchTrialRequest';
+export * from './getMatchEvaluation404Response';
+export * from './getMatchScore404Response';
+export * from './getMatchTrial403Response';
+export * from './getMatchTrial404Response';
+export * from './getSolution404Response';
+export * from './matchTrialEvaluation';
+export * from './matchTrialResponse';
+export * from './matchTrialScore';
+export * from './matchTrialStatus';
+export * from './runnerStatus';
+export * from './scalarOrVector';
+export * from './serverErrorCode';
+export * from './serverErrorResponse';
 export * from './solution';
 
 import * as fs from 'fs';
@@ -19,10 +34,25 @@ export interface RequestDetailedFile {
 export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
-import { CreateSolutionResponse } from './createSolutionResponse';
-import { GetSolutionError } from './getSolutionError';
-import { Participant } from './participant';
-import { ParticipantType } from './participantType';
+import { AuthErrorCode } from './authErrorCode';
+import { AuthErrorResponse } from './authErrorResponse';
+import { CreateMatchTrial400Response } from './createMatchTrial400Response';
+import { CreateMatchTrial403Response } from './createMatchTrial403Response';
+import { CreateMatchTrial404Response } from './createMatchTrial404Response';
+import { CreateMatchTrialRequest } from './createMatchTrialRequest';
+import { GetMatchEvaluation404Response } from './getMatchEvaluation404Response';
+import { GetMatchScore404Response } from './getMatchScore404Response';
+import { GetMatchTrial403Response } from './getMatchTrial403Response';
+import { GetMatchTrial404Response } from './getMatchTrial404Response';
+import { GetSolution404Response } from './getSolution404Response';
+import { MatchTrialEvaluation } from './matchTrialEvaluation';
+import { MatchTrialResponse } from './matchTrialResponse';
+import { MatchTrialScore } from './matchTrialScore';
+import { MatchTrialStatus } from './matchTrialStatus';
+import { RunnerStatus } from './runnerStatus';
+import { ScalarOrVector } from './scalarOrVector';
+import { ServerErrorCode } from './serverErrorCode';
+import { ServerErrorResponse } from './serverErrorResponse';
 import { Solution } from './solution';
 
 /* tslint:disable:no-unused-variable */
@@ -38,13 +68,36 @@ let primitives = [
                  ];
 
 let enumsMap: {[index: string]: any} = {
-        "GetSolutionError": GetSolutionError,
-        "ParticipantType": ParticipantType,
+        "AuthErrorCode": AuthErrorCode,
+        "CreateMatchTrial400Response.CodeEnum": CreateMatchTrial400Response.CodeEnum,
+        "CreateMatchTrial403Response.CodeEnum": CreateMatchTrial403Response.CodeEnum,
+        "CreateMatchTrial404Response.CodeEnum": CreateMatchTrial404Response.CodeEnum,
+        "GetMatchEvaluation404Response.CodeEnum": GetMatchEvaluation404Response.CodeEnum,
+        "GetMatchScore404Response.CodeEnum": GetMatchScore404Response.CodeEnum,
+        "GetMatchTrial403Response.CodeEnum": GetMatchTrial403Response.CodeEnum,
+        "GetMatchTrial404Response.CodeEnum": GetMatchTrial404Response.CodeEnum,
+        "GetSolution404Response.CodeEnum": GetSolution404Response.CodeEnum,
+        "MatchTrialStatus": MatchTrialStatus,
+        "RunnerStatus": RunnerStatus,
+        "ServerErrorCode": ServerErrorCode,
 }
 
 let typeMap: {[index: string]: any} = {
-    "CreateSolutionResponse": CreateSolutionResponse,
-    "Participant": Participant,
+    "AuthErrorResponse": AuthErrorResponse,
+    "CreateMatchTrial400Response": CreateMatchTrial400Response,
+    "CreateMatchTrial403Response": CreateMatchTrial403Response,
+    "CreateMatchTrial404Response": CreateMatchTrial404Response,
+    "CreateMatchTrialRequest": CreateMatchTrialRequest,
+    "GetMatchEvaluation404Response": GetMatchEvaluation404Response,
+    "GetMatchScore404Response": GetMatchScore404Response,
+    "GetMatchTrial403Response": GetMatchTrial403Response,
+    "GetMatchTrial404Response": GetMatchTrial404Response,
+    "GetSolution404Response": GetSolution404Response,
+    "MatchTrialEvaluation": MatchTrialEvaluation,
+    "MatchTrialResponse": MatchTrialResponse,
+    "MatchTrialScore": MatchTrialScore,
+    "ScalarOrVector": ScalarOrVector,
+    "ServerErrorResponse": ServerErrorResponse,
     "Solution": Solution,
 }
 
